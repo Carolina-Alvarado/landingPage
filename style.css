@@ -4,15 +4,333 @@
     box-sizing: border-box;
 }
 
+.fondo {
+    width: 100%;
+    height: 120vh;
+    object-fit: cover;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    height: 500vh;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.019);
+    border-bottom: 1px solid white;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    position: fixed;
+    top: 0;
+
+    .logo {
+        margin-left: 100px;
+    }
+
+    #logo-mobile {
+        display: none;
+    }
+
+    .links { 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 40px;
+
+        .idiomas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+
+            img {
+                margin-right: 40px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .grey {
+            color: grey;
+        }
+
+        .registro {
+            display: grid;
+            grid-template-columns: 1fr 1px 1fr;
+            
+            a {
+                justify-self: center;
+            }
+
+            #bar {
+                height: 100%;
+                width: 1px;
+                background-color: white;
+            }
+        }
+
+        
+    }
+}
+
+.seccion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+
+        .gal-uno {
+            grid-column: span 2;
+            width: 90px;
+        }
+
+        .gal-dos {
+            grid-column: span 2;
+            width: 290px;
+            height: auto;
+            position: relative;
+
+            .texto1 { 
+                position: absolute; 
+                top: 80%; 
+                left: 30%; 
+                transform: translate(-50%, -50%); 
+                color: white; 
+                font-size: 24px; 
+                text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+            }
+
+            .texto { 
+                position: absolute; 
+                top: 88%; 
+                left: 30%; 
+                transform: translate(-50%, -50%); 
+                color: white; 
+                font-size: 24px; 
+                font-weight: bold; 
+                text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        .gal-tres {
+            grid-column: span 5;
+            width: 380px;
+            height: 350px;           
+            position: relative;
+        }
+
+        .texto2 { 
+            color: rgb(127, 184, 113); 
+            font-size: 24px; 
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .texto3 { 
+            color: rgb(0, 0, 0); 
+            font-size: 24px; 
+            font-weight: bold; 
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .alinear-derecha {
+        text-align: right;
+        font-size: 35px;
+        
+        margin-top: 55px;
+    }
+
+    .naranja {
+        color: orange;
+    }
+
+    .negro-negrita {
+        color: black;
+        font-weight: bold;
+        font-size: 60px;
+    }
+
+    .fila {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 250px;
+    }
+
+    .plomo {
+        color: gray;
+    }
+
+    .view-propiedades {
+        border: 1px solid black;
+        background-color: white;
+        border-radius: 50px;
+        padding: 5px 10px;
+        font-size: 20px;
+    }
+
+    .naranja-boton {
+        color: orange;
+    }
+
+    .final {
+        margin-right: 80px;
+    }
+}
+
+.contenido {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #989797;
+
+    .alinear-derecha {
+        text-align: center;
+        font-size: 30px;
+        margin-top: 55px;
+    }
+
+    .naranja {
+        color: orange;
+    }
+
+    .negro-negrita {
+        color: black;
+        font-weight: bold;
+        font-size: 60px;
+    }
+}
+
+        .section {
+            text-align: left;
+            padding: 50px 20px;
+        }
+
+        .section h1 {
+            font-size: 36px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .section h1 span {
+            color: #d4a556;
+            font-weight: bold;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid-item {
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .grid-item .info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .grid-item .info h2 {
+            font-size: 15px;
+            margin: 0;
+            text-align: left;
+        }
+
+        .grid-item .info p {
+            font-size: 23px;
+            color: #000000;
+            font-weight: bold; 
+            text-align: left;
+        }
+
 footer{
     height: 500px;
     width: 100%;
     background-color: black;
-    margin-top: 30px;
+    margin-top: 200px;
+    position: sticky;
+
+    .negro {
+        color: white;
+        display: grid;
+        width: 90%;
+        margin: auto;
+        gap: 20px;
+
+        .enlaces-footer {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            color: #b0aeae;
+            font-size: 20px;
+
+            .primera-foot {
+                align-self: self-end;
+            }
+
+            .medio-segunda {
+                align-self: center;
+            }
+
+            .medio-tercera {
+                align-self: center;#num {
+                    color: rgb(255, 255, 255);
+                }
+            }
+
+            .ultima-foot {
+                text-align: right;
+                align-self: self-end;
+
+                #num {
+                    color: rgb(255, 255, 255);
+                }
+            }
+
+            ul {
+                li {
+                    list-style: none;
+                }
+            }
+        }
+
+        .copy {
+            border-top: solid 2px white;
+            p {
+                margin-top: 20px;
+                text-align: center;
+            }
+        }
+    }
+    
     .gris{
         height: 300px;
         background-color: #444;
-        width: 80%;
+        width: 90%;
         margin: auto;
         transform: translateY(-50%);
         display: grid;
@@ -21,40 +339,64 @@ footer{
 
         .segunda{
             display: grid;
+            padding: 100px;
             
             input {
                 background-color: transparent;
                 border: solid 1px gray;
                 border-radius: 24px;
-                padding: 20px;
+                padding: 10px 20px;
                 font-size: 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
             }
 
-            buttom {
+            button {
                 background-color: transparent;
                 border: solid 1px orange;
                 color: orange;
                 border-radius: 24px;
                 padding: 10px 20px; 
                 font-size: 20px;
+                width: 60%;
+                justify-self: end;
             }
     
             p {
                 margin-left: 20px;
                 color: white;
-            }
-        
+                font-size: 20px;
+            }  
+        }  
+         
+        #textFooter{
+            font-size: 30px;
+            color: white;
+            justify-self: center;
+    
+            span  {
+                color: orange;
+            }  
+        }    
+    }
+}
+
+
+@media (max-width: 900px) {
+    html {
+        background-color: rgb(255, 255, 255);
     }
 
-    }
-
-    #textFooter{
-        font-size: 30px;
-        color: white;
-        text-align: center;
-
-        span  {
-            color: orange;
+    .negro {
+        .copy {
+            display: none;
         }
     }
+
+    nav {
+        .links {
+            display: none;
+        }
+    }
+
 }
